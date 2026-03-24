@@ -661,7 +661,7 @@ public struct InsertAffiliateSwift {
     // MARK: Offer Code
     internal static func removeSpecialCharacters(from string: String) -> String {
         var allowedCharacters = CharacterSet.alphanumerics
-        allowedCharacters.insert(charactersIn: "_")
+        allowedCharacters.insert(charactersIn: "_-")
         return string.unicodeScalars.filter { allowedCharacters.contains($0) }.map { Character($0) }.reduce("") { $0 + String($1) }
     }
     
